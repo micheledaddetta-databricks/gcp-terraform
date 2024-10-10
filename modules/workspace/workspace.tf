@@ -11,11 +11,11 @@ resource "databricks_mws_workspaces" "databricks_workspace" {
   }
 
   private_access_settings_id = databricks_mws_private_access_settings.pas.private_access_settings_id
-  network_id = databricks_mws_networks.databricks_network.network_id
+  network_id                 = databricks_mws_networks.databricks_network.network_id
   gke_config {
     connectivity_type = "PRIVATE_NODE_PUBLIC_MASTER"
     master_ip_range   = var.gke_master_ip_range
   }
-  storage_customer_managed_key_id = databricks_mws_customer_managed_keys.this.customer_managed_key_id
+  storage_customer_managed_key_id          = databricks_mws_customer_managed_keys.this.customer_managed_key_id
   managed_services_customer_managed_key_id = databricks_mws_customer_managed_keys.this.customer_managed_key_id
 }

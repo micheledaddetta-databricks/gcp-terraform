@@ -8,3 +8,7 @@ output "workspace_id" {
 output "workspace_name" {
   value = var.workspace_name
 }
+
+output "unity_catalog_metastore_service_account" {
+  value = module.unity_catalog.unity_catalog_metastore_service_account
+}
