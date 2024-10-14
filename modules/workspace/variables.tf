@@ -26,3 +26,7 @@ variable "gke_master_ip_range" {}
 
 variable "workspace_pe_name" {}
 variable "relay_pe_name" {}
+
+
+variable "google_service_account" {
+}

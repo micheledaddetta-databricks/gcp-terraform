@@ -7,4 +7,6 @@ module "unity_catalog" {
   google_region                 = var.google_region
   metastore_bucket              = var.metastore_bucket
   unity_catalog_resource_prefix = var.unity_catalog_resource_prefix
+
+  google_service_account = var.google_service_account
 }

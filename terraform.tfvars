@@ -18,4 +18,6 @@ workspace_pe_name = ""
 relay_pe_name     = ""
 
 unity_catalog_resource_prefix = ""
-metastore_bucket = "gs://ciccio"
+metastore_bucket = "gs://"
+
+google_service_account = ""

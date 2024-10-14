@@ -19,4 +19,6 @@ module "workspace" {
 
   relay_pe_name     = var.relay_pe_name
   workspace_pe_name = var.workspace_pe_name
+
+  google_service_account = var.google_service_account
 }

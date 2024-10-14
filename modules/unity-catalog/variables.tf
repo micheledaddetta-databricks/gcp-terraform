@@ -14,3 +14,7 @@ variable "databricks_workspace_ids" {
   type    = list(string)
   default = []
 }
+
+
+variable "google_service_account" {
+}

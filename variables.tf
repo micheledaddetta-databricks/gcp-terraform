@@ -67,3 +67,5 @@ variable "metastore_bucket" {
 variable "unity_catalog_resource_prefix" {
   default = null
 }
+
+variable "google_service_account" {}
