@@ -16,6 +16,6 @@ resource "databricks_mws_workspaces" "databricks_workspace" {
     connectivity_type = "PRIVATE_NODE_PUBLIC_MASTER"
     master_ip_range   = var.gke_master_ip_range
   }
-  storage_customer_managed_key_id          = databricks_mws_customer_managed_keys.this.customer_managed_key_id
-  managed_services_customer_managed_key_id = databricks_mws_customer_managed_keys.this.customer_managed_key_id
+  storage_customer_managed_key_id          = databricks_mws_customer_managed_keys.storage.customer_managed_key_id
+  managed_services_customer_managed_key_id = databricks_mws_customer_managed_keys.managed_service.customer_managed_key_id
 }

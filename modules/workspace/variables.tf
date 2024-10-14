@@ -8,7 +8,8 @@ variable "workspace_name" {}
 
 ###### CMEK VARIABLES
 
-variable "cmek_resource_id" {}
+variable "managed_service_cmek_resource_id" {}
+variable "storage_cmek_resource_id" {}
 
 
 ###### NETWORK VARIABLES

@@ -13,8 +13,12 @@ variable "google_region" {
   description = "Google Cloud region to use"
 }
 
-variable "cmek_resource_id" {
-  description = "Google Cloud Customer Managed Encryption Key ID"
+variable "managed_service_cmek_resource_id" {
+  description = "Google Cloud Customer Managed Encryption Key ID form Databricks managed services"
+}
+
+variable "storage_cmek_resource_id" {
+  description = "Google Cloud Customer Managed Encryption Key ID form Databricks storage"
 }
 
 
@@ -40,6 +44,7 @@ variable "service_subnet_name" {
 
 variable "gke_master_ip_range" {
   description = "IP range assigned to GKE master nodes"
+  default = null
 }
 
 variable "workspace_pe_name" {
@@ -56,6 +61,9 @@ variable "metastore_bucket" {
     condition = can(regex("gs://.*", var.metastore_bucket))
     error_message = "The GCS URI is not in the proper format (not starting with gs://)"
   }
+  default = null
 }
 
-variable "unity_catalog_resource_prefix" {}
+variable "unity_catalog_resource_prefix" {
+  default = null
+}

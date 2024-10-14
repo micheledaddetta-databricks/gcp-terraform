@@ -4,7 +4,8 @@ databricks_account_id = ""
 google_project        = ""
 google_region         = ""
 
-cmek_resource_id = ""
+managed_service_cmek_resource_id = ""
+storage_cmek_resource_id = ""
 
 google_vpc_project  = ""
 google_vpc_id       = ""
