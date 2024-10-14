@@ -1,6 +1,7 @@
 variable "workspace_name" {
   description = "Name to assign to workspace and related resources"
 }
+
 variable "databricks_account_id" {
   description = "Databricks Account ID"
 }
@@ -11,6 +12,11 @@ variable "google_project" {
 
 variable "google_region" {
   description = "Google Cloud region to use"
+}
+
+variable "workspace_admins" {
+  default = []
+  type    = list(string)
 }
 
 variable "managed_service_cmek_resource_id" {

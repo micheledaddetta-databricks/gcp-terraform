@@ -7,6 +7,8 @@ module "workspace" {
   google_project        = var.google_project
   google_region         = var.google_region
 
+  workspace_admins = var.workspace_admins
+
   managed_service_cmek_resource_id = var.managed_service_cmek_resource_id
   storage_cmek_resource_id         = var.storage_cmek_resource_id
 
