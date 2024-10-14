@@ -44,7 +44,7 @@ variable "service_subnet_name" {
 
 variable "gke_master_ip_range" {
   description = "IP range assigned to GKE master nodes"
-  default = null
+  default     = null
 }
 
 variable "workspace_pe_name" {
@@ -58,7 +58,7 @@ variable "relay_pe_name" {
 variable "metastore_bucket" {
   description = "Google Cloud GCS bucket assigned for Unity Catalog metastore management"
   validation {
-    condition = can(regex("gs://.*", var.metastore_bucket))
+    condition     = can(regex("gs://.*", var.metastore_bucket))
     error_message = "The GCS URI is not in the proper format (not starting with gs://)"
   }
   default = null

@@ -8,7 +8,7 @@ resource "databricks_metastore" "this" {
 
 resource "databricks_metastore_assignment" "this" {
   provider = databricks.workspace
-  for_each    = toset(var.databricks_workspace_ids)
+  for_each = toset(var.databricks_workspace_ids)
 
   workspace_id = each.value
   metastore_id = databricks_metastore.this.id
