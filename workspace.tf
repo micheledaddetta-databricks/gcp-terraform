@@ -23,4 +23,6 @@ module "workspace" {
   workspace_pe_name = var.workspace_pe_name
 
   google_service_account = var.google_service_account
+
+  metastore_id           = module.unity_catalog.metastore_id
 }

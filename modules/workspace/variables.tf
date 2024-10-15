@@ -34,3 +34,6 @@ variable "relay_pe_name" {}
 
 variable "google_service_account" {
 }
+
+###### UC VARIABLES
+variable "metastore_id" {}
