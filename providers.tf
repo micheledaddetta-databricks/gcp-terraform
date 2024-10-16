@@ -2,7 +2,7 @@ terraform {
   required_providers {
     databricks = {
       source  = "databricks/databricks"
-      version = "1.52.0"
+      version = "1.53.0"
     }
   }
 }
@@ -21,10 +21,4 @@ provider "databricks" {
   host                   = module.workspace.workspace_url
   account_id             = var.databricks_account_id
   google_service_account = var.google_service_account
-}
-
-#Requires GOOGLE_CREDENTIALS env variable to be set, otherwise use impersonate_service_account for impersonation
-provider "google" {
-  project = var.google_project
-  region  = var.google_region
 }

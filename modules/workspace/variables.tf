@@ -32,8 +32,14 @@ variable "workspace_pe_name" {}
 variable "relay_pe_name" {}
 
 
-variable "google_service_account" {
-}
+
 
 ###### UC VARIABLES
+
 variable "metastore_id" {}
+variable "default_catalog" {}
+
+
+###### AUTH VARIABLES
+
+variable "google_service_account" {}

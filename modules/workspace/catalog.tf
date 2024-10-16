@@ -1,8 +1,13 @@
 
 resource "databricks_metastore_assignment" "this" {
   provider = databricks.accounts
+
   workspace_id = databricks_mws_workspaces.databricks_workspace.workspace_id
   metastore_id = var.metastore_id
+}
 
-  default_catalog_name = "${databricks_mws_workspaces.databricks_workspace.workspace_id}-main"
+resource "databricks_workspace_binding" "sandbox" {
+  provider       = databricks.workspace
+  securable_name = var.default_catalog
+  workspace_id   = databricks_mws_workspaces.databricks_workspace.workspace_id
 }

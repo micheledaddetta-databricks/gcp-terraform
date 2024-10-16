@@ -4,7 +4,7 @@
 resource "databricks_mws_vpc_endpoint" "relay_vpce" {
   provider          = databricks.accounts
   account_id        = var.databricks_account_id
-  vpc_endpoint_name = "${var.workspace_name}-backend-relay-ep"
+  vpc_endpoint_name = "${var.workspace_name}-relay-ep"
   gcp_vpc_endpoint_info {
     project_id        = var.google_vpc_project
     psc_endpoint_name = var.relay_pe_name
@@ -16,7 +16,8 @@ resource "databricks_mws_vpc_endpoint" "relay_vpce" {
 resource "databricks_mws_vpc_endpoint" "workspace_vpce" {
   provider          = databricks.accounts
   account_id        = var.databricks_account_id
-  vpc_endpoint_name = "${var.workspace_name}-rest-workspace-ep"
+  vpc_endpoint_name = "${var.workspace_name}-ws-ep"
+
   gcp_vpc_endpoint_info {
     project_id        = var.google_vpc_project
     psc_endpoint_name = var.workspace_pe_name
@@ -46,7 +47,7 @@ resource "databricks_mws_private_access_settings" "pas" {
 
   */
 
-  public_access_enabled = false
+  public_access_enabled = true
 
   /*
   Private access level: A specification to restrict access to only authorized Private Service Connect connections.

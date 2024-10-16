@@ -5,6 +5,7 @@ variable "google_region" {}
 variable "metastore_bucket" {
   default = null
 }
+
 variable "unity_catalog_resource_prefix" {
   default = null
 }
