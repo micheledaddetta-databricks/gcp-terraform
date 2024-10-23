@@ -60,14 +60,9 @@ variable "relay_pe_name" {
   description = "Google Cloud PSC endpoint name for back-end communication"
 }
 
-
-variable "metastore_bucket" {
-  description = "Google Cloud GCS bucket assigned for Unity Catalog metastore management"
-  validation {
-    condition     = can(regex("gs://.*", var.metastore_bucket))
-    error_message = "The GCS URI is not in the proper format (not starting with gs://)"
-  }
-  default = null
+variable "default_catalog_bucket" {
+  description = "Google Cloud GCS bucket assigned for Unity Catalog workspace catalog"
+  default     = null
 }
 
 variable "unity_catalog_resource_prefix" {

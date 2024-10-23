@@ -37,7 +37,9 @@ variable "relay_pe_name" {}
 ###### UC VARIABLES
 
 variable "metastore_id" {}
-variable "default_catalog" {}
+variable "default_catalog_bucket" {
+  default = null
+}
 
 
 ###### AUTH VARIABLES

@@ -22,8 +22,8 @@ module "workspace" {
   relay_pe_name     = var.relay_pe_name
   workspace_pe_name = var.workspace_pe_name
 
-  metastore_id    = module.unity_catalog.metastore_id
-  default_catalog = module.unity_catalog.catalog_name
+  metastore_id           = module.unity_catalog.metastore_id
+  default_catalog_bucket = var.default_catalog_bucket
 
   google_service_account = var.google_service_account
 }
