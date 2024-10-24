@@ -9,7 +9,7 @@ data "databricks_spark_version" "latest" {
 resource "databricks_cluster" "all_purpose" {
   provider = databricks.workspace
 
-  cluster_name = "Job cluster"
+  cluster_name = "All purpose cluster"
 
   spark_version           = data.databricks_spark_version.latest.id
   runtime_engine          = "STANDARD" #PHOTON
@@ -26,5 +26,11 @@ resource "databricks_cluster" "all_purpose" {
     clients {
       notebooks = true
     }
+  }
+
+  gcp_attributes {
+    google_service_account = var.cluster_service_account
+    boot_disk_size = 50
+    local_ssd_count = 1
   }
 }

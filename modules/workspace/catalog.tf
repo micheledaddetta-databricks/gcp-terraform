@@ -1,4 +1,3 @@
-
 resource "databricks_metastore_assignment" "this" {
   provider = databricks.accounts
 
@@ -7,10 +6,10 @@ resource "databricks_metastore_assignment" "this" {
 }
 
 resource "databricks_catalog" "default" {
-  provider = databricks.accounts
+  provider = databricks.workspace
   count    = var.default_catalog_bucket != null ? 1 : 0
 
-  name           = "${var.workspace_name}-main"
+  name           = "main"
   comment        = "This catalog is managed by terraform"
   storage_root   = var.default_catalog_bucket
   isolation_mode = "ISOLATED"

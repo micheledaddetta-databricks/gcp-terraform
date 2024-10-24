@@ -69,4 +69,6 @@ variable "unity_catalog_resource_prefix" {
   default = null
 }
 
+variable "cluster_service_account" {}
+
 variable "google_service_account" {}
