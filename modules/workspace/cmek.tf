@@ -8,10 +8,6 @@ resource "databricks_mws_customer_managed_keys" "managed_service" {
   }
 
   use_cases = ["MANAGED_SERVICES"]
-
-  /*lifecycle {
-    ignore_changes = all
-  }*/
 }
 
 resource "databricks_mws_customer_managed_keys" "storage" {
@@ -24,8 +20,4 @@ resource "databricks_mws_customer_managed_keys" "storage" {
   }
 
   use_cases = ["STORAGE"]
-
-  /*lifecycle {
-    ignore_changes = all
-  }*/
 }

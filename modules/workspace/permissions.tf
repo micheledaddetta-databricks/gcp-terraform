@@ -8,6 +8,8 @@ resource "databricks_mws_permission_assignment" "add_admin_users" {
 }
 
 data "databricks_user" "admin_users" {
+
+  depends_on = [databricks_mws_workspaces.databricks_workspace]
   provider = databricks.accounts
   for_each = toset(var.workspace_admins)
 

@@ -19,7 +19,9 @@ resource "databricks_cluster" "all_purpose" {
   enable_elastic_disk     = false
   num_workers             = 3
 
-  custom_tags = {}
+  custom_tags = {
+    "x-databricks-nextgen-cluster": "true"
+  }
   spark_conf  = {}
 
   workload_type {

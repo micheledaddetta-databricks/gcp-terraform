@@ -3,6 +3,8 @@ resource "databricks_metastore_assignment" "this" {
 
   workspace_id = databricks_mws_workspaces.databricks_workspace.workspace_id
   metastore_id = var.metastore_id
+
+  default_catalog_name = var.default_catalog_bucket != null ? databricks_catalog.default[0].name : "hive_metastore"
 }
 
 resource "databricks_catalog" "default" {
@@ -18,5 +20,4 @@ resource "databricks_catalog" "default" {
     purpose = "poc"
   }
 
-  depends_on = [databricks_metastore_assignment.this]
 }
