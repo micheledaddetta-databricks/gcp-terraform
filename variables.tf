@@ -65,6 +65,10 @@ variable "default_catalog_bucket" {
   default     = null
 }
 
+variable "default_catalog_owner" {
+  default = null
+}
+
 variable "unity_catalog_resource_prefix" {
   default = null
 }

@@ -20,9 +20,9 @@ resource "databricks_cluster" "all_purpose" {
   num_workers             = 3
 
   custom_tags = {
-    "x-databricks-nextgen-cluster": "true"
+    "x-databricks-nextgen-cluster" : "true"
   }
-  spark_conf  = {}
+  spark_conf = {}
 
   workload_type {
     clients {
@@ -32,7 +32,7 @@ resource "databricks_cluster" "all_purpose" {
 
   gcp_attributes {
     google_service_account = var.cluster_service_account
-    boot_disk_size = 50
-    local_ssd_count = 1
+    boot_disk_size         = 50
+    local_ssd_count        = 1
   }
 }

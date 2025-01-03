@@ -40,6 +40,7 @@ variable "metastore_id" {}
 variable "default_catalog_bucket" {
   default = null
 }
+variable "default_catalog_owner" {}
 
 
 ###### AUTH VARIABLES

@@ -24,6 +24,7 @@ module "workspace" {
 
   metastore_id           = module.unity_catalog.metastore_id
   default_catalog_bucket = var.default_catalog_bucket
+  default_catalog_owner  = var.default_catalog_owner
 
   google_service_account = var.google_service_account
 }

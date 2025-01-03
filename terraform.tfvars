@@ -4,7 +4,7 @@ databricks_account_id = ""
 google_project        = ""
 google_region         = ""
 
-workspace_admins = []
+workspace_admins = ""
 
 managed_service_cmek_resource_id = ""
 storage_cmek_resource_id         = ""
@@ -20,6 +20,9 @@ workspace_pe_name = ""
 relay_pe_name     = ""
 
 unity_catalog_resource_prefix = ""
-metastore_bucket              = "gs://"
+default_catalog_bucket        = ""
+default_catalog_owner         = ""
 
 google_service_account = ""
+
+cluster_service_account = ""
